@@ -1,5 +1,5 @@
 [![main](https://github.com/ViacheslavMelnichenko/BinaryCodec/actions/workflows/main.yml/badge.svg)](https://github.com/ViacheslavMelnichenko/BinaryCodec/actions/workflows/main.yml/badge.svg)
-[![codecov](https://codecov.io/gh/ViacheslavMelnichenko/BinaryCodec/graph/badge.svg?token=GELU6WYY37)](https://codecov.io/gh/ViacheslavMelnichenko/BinaryCodec)
+[![codecov](https://codecov.io/gh/ViacheslavMelnichenko/BinaryCodec/graph/badge.svg?token=HXY46DM74W)](https://codecov.io/gh/ViacheslavMelnichenko/BinaryCodec)
 
 # BinaryMessageCodec
 
