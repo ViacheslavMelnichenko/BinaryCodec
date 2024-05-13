@@ -1,4 +1,4 @@
-﻿namespace MessageCodec.Contracts;
+﻿namespace BinaryMessageCodec.Contracts;
 
 public interface IMessageCodec
 {

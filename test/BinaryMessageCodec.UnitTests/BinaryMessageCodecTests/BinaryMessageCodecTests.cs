@@ -1,14 +1,14 @@
 using Bogus;
 using FluentAssertions;
 using FluentAssertions.Execution;
+using BinaryMessageCodec.Models;
 using Xunit;
-using Message = MessageCodec.Models.Message;
 
-namespace MessageCodec.UnitTests.BinaryMessageCodecTests;
+namespace BinaryMessageCodec.UnitTests.BinaryMessageCodecTests;
 
 public class BinaryMessageCodecTests
 {
-    private readonly BinaryMessageCodec _codec = new();
+    private readonly BinaryMessageCodec _messageCodec = new();
     private readonly Faker _faker = new();
 
     [Fact]
@@ -29,8 +29,8 @@ public class BinaryMessageCodecTests
         );
 
         // Act
-        var encoded = _codec.Encode(originalMessage);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(originalMessage);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         using (new AssertionScope())
@@ -49,8 +49,8 @@ public class BinaryMessageCodecTests
         var originalMessage = new Message(new Dictionary<string, string>(), []);
 
         // Act
-        var encoded = _codec.Encode(originalMessage);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(originalMessage);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         using (new AssertionScope())
@@ -67,8 +67,8 @@ public class BinaryMessageCodecTests
         var message = new Message(new Dictionary<string, string>(), "Some payload"u8.ToArray());
 
         // Act
-        var encoded = _codec.Encode(message);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(message);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         using (new AssertionScope())
@@ -90,8 +90,8 @@ public class BinaryMessageCodecTests
         }, []);
 
         // Act
-        var encoded = _codec.Encode(message);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(message);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         using (new AssertionScope())
@@ -118,8 +118,8 @@ public class BinaryMessageCodecTests
         );
 
         // Act
-        var encoded = _codec.Encode(originalMessage);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(originalMessage);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         using (new AssertionScope())
@@ -141,8 +141,8 @@ public class BinaryMessageCodecTests
         );
 
         // Act
-        var encoded = _codec.Encode(originalMessage);
-        var decodedMessage = _codec.Decode(encoded);
+        var encoded = _messageCodec.Encode(originalMessage);
+        var decodedMessage = _messageCodec.Decode(encoded);
 
         // Assert
         decodedMessage.Payload.Should().BeEquivalentTo(payload);

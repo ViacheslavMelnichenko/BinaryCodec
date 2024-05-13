@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using MessageCodec.Contracts;
+using BinaryMessageCodec.Contracts;
 
-namespace MessageCodec.Models;
+namespace BinaryMessageCodec.Models;
 
 public sealed record Message(Dictionary<string, string> Headers, byte[] Payload) : IMessage;

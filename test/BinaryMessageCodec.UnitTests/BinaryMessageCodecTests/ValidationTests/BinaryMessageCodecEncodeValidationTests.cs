@@ -1,13 +1,13 @@
 using Bogus;
 using FluentAssertions;
-using MessageCodec.Models;
+using BinaryMessageCodec.Models;
 using Xunit;
 
-namespace MessageCodec.UnitTests.BinaryMessageCodecTests.ValidationTests;
+namespace BinaryMessageCodec.UnitTests.BinaryMessageCodecTests.ValidationTests;
 
 public class BinaryMessageCodecEncodeValidationTests
 {
-    private readonly BinaryMessageCodec _codec = new();
+    private readonly BinaryMessageCodec _messageCodec = new();
     private readonly Faker _faker = new();
 
     [Theory]
@@ -20,7 +20,7 @@ public class BinaryMessageCodecEncodeValidationTests
         var message = new Message(headers, []);
 
         // Act
-        Action act = () => _codec.Encode(message);
+        Action act = () => _messageCodec.Encode(message);
 
         // Assert
         act.Should()
@@ -45,7 +45,7 @@ public class BinaryMessageCodecEncodeValidationTests
         );
 
         // Act
-        Action act = () => _codec.Encode(message);
+        Action act = () => _messageCodec.Encode(message);
 
         // Assert
         act.Should()
@@ -70,7 +70,7 @@ public class BinaryMessageCodecEncodeValidationTests
         );
 
         // Act
-        Action act = () => _codec.Encode(message);
+        Action act = () => _messageCodec.Encode(message);
 
         // Assert
         act.Should()
@@ -87,7 +87,7 @@ public class BinaryMessageCodecEncodeValidationTests
         var message = new Message(new Dictionary<string, string>(), payload);
 
         // Act
-        Action act = () => _codec.Encode(message);
+        Action act = () => _messageCodec.Encode(message);
 
         // Assert
         act.Should()

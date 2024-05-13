@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using MessageCodec.Contracts;
-using MessageCodec.Models;
-using MessageCodec.Validation;
+using BinaryMessageCodec.Contracts;
+using BinaryMessageCodec.Models;
+using BinaryMessageCodec.Validation;
 
-namespace MessageCodec;
+namespace BinaryMessageCodec;
 
 public sealed class BinaryMessageCodec : IMessageCodec
 {

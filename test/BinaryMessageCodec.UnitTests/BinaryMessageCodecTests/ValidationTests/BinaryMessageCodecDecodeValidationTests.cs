@@ -1,11 +1,11 @@
 using FluentAssertions;
 using Xunit;
 
-namespace MessageCodec.UnitTests.BinaryMessageCodecTests.ValidationTests;
+namespace BinaryMessageCodec.UnitTests.BinaryMessageCodecTests.ValidationTests;
 
 public class BinaryMessageCodecDecodeValidationTests
 {
-    private readonly BinaryMessageCodec _codec = new();
+    private readonly BinaryMessageCodec _messageCodec = new();
 
     [Fact]
     public void Decode_Should_ThrowException_When_DataIsCorrupted()
@@ -17,7 +17,7 @@ public class BinaryMessageCodecDecodeValidationTests
         };
 
         // Act
-        Action act = () => _codec.Decode(corruptedData);
+        Action act = () => _messageCodec.Decode(corruptedData);
 
         // Assert
         act.Should().Throw<EndOfStreamException>();

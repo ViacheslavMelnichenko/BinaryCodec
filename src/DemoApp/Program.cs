@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using MessageCodec;
-using MessageCodec.Contracts;
-using MessageCodec.Models;
+using BinaryMessageCodec.Contracts;
+using BinaryMessageCodec.Models;
 
 Console.WriteLine("Demo App started");
 
@@ -18,7 +17,7 @@ IMessage originalMessage = new Message(
     "Fruits and vegetables are excellent sources of vitamins."u8.ToArray()
 );
 
-var сodec = new BinaryMessageCodec();
+var сodec = new BinaryMessageCodec.BinaryMessageCodec();
 
 var encoded = сodec.Encode(originalMessage);
 

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MessageCodec.Contracts;
+namespace BinaryMessageCodec.Contracts;
 
 public interface IMessage
 {

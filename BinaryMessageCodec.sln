@@ -4,11 +4,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6BB67746-FE2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9DF6FA7F-B459-4A4B-ADFA-40B94EFAA14D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCodec", "src\MessageCodec\MessageCodec.csproj", "{1287D3CA-5C7E-4510-9277-0E15BB3759B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMessageCodec", "src\BinaryMessageCodec\BinaryMessageCodec.csproj", "{1287D3CA-5C7E-4510-9277-0E15BB3759B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCodec.UnitTests", "test\MessageCodec.UnitTests\MessageCodec.UnitTests.csproj", "{C554D77B-F51A-4526-99C7-BBB4655381C1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryMessageCodec.UnitTests", "test\BinaryMessageCodec.UnitTests\BinaryMessageCodec.UnitTests.csproj", "{C554D77B-F51A-4526-99C7-BBB4655381C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageCodec.DemoApp", "src\MessageCodec.DemoApp\MessageCodec.DemoApp.csproj", "{C61DF82D-853E-4568-8C5E-B1364B521CD1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoApp", "src\DemoApp\DemoApp.csproj", "{C61DF82D-853E-4568-8C5E-B1364B521CD1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +32,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{1287D3CA-5C7E-4510-9277-0E15BB3759B4} = {6BB67746-FE29-47CE-85F6-2FD7ED9717D6}
 		{C554D77B-F51A-4526-99C7-BBB4655381C1} = {9DF6FA7F-B459-4A4B-ADFA-40B94EFAA14D}
-		{C61DF82D-853E-4568-8C5E-B1364B521CD1} = {6BB67746-FE29-47CE-85F6-2FD7ED9717D6}
 	EndGlobalSection
 EndGlobal

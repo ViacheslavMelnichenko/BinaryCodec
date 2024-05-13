@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using MessageCodec.Contracts;
+using BinaryMessageCodec.Contracts;
 
-namespace MessageCodec.Validation;
+namespace BinaryMessageCodec.Validation;
 
 public sealed class DefaultMessageValidator
 {
@@ -14,7 +14,7 @@ public sealed class DefaultMessageValidator
     private const int MaxPayloadSizeInKilobytes = 256;
     private const int MaxPayloadSizeInBytes = MaxPayloadSizeInKilobytes * BytesPerKilobyte;
 
-    public void ValidateEncoding(string data)
+    private void ValidateEncoding(string data)
     {
         if (data.Any(c => c > 127))
             throw new InvalidOperationException($"String contains non-ASCII characters. String: {data}");
@@ -44,7 +44,7 @@ public sealed class DefaultMessageValidator
         }
     }
 
-    public void ValidateHeaders(Dictionary<string, string> headers)
+    private void ValidateHeaders(Dictionary<string, string> headers)
     {
         foreach (var header in headers)
         {
