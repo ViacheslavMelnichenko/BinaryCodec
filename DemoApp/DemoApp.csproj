@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BinaryMessageCodec\BinaryMessageCodec.csproj" />
+      <ProjectReference Include="..\src\BinaryMessageCodec\BinaryMessageCodec.csproj" />
     </ItemGroup>
 
 </Project>
